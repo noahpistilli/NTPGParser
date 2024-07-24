@@ -7,7 +7,7 @@ import (
 
 func (r *Root) ParsePane(data []byte) {
 	// TODO: is there only the root pane in this file format?
-
+	// I have only observed one pane
 	var pane Dimensions
 	err := binary.Read(bytes.NewReader(data[4:]), binary.LittleEndian, &pane)
 	if err != nil {
